@@ -1,5 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // 0. SCROLL REVEAL
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
   // 1. STICKY NAV
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
