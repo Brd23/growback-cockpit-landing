@@ -911,33 +911,30 @@ p { color: var(--color-text-dim); line-height: 1.7; font-size: 1.0625rem; }
   border-bottom: 1px solid var(--color-border);
 }
 .comp-table th:last-child { color: var(--color-accent); }
-.comp-table td { padding: 0.875rem 1.25rem; border-bottom: 1px solid var(--color-border); color: var(--color-text-dim); vertical-align: middle; }
+.comp-table td { padding: 0.875rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.03); color: var(--color-text-dim); vertical-align: middle; }
 .comp-table tr:last-child td { border-bottom: none; }
-.comp-table tr:hover td { background: rgba(255,255,255,0.012); }
+.comp-table tr:hover td { background: rgba(255,255,255,0.02); }
 .comp-table td:first-child { font-weight: 600; color: var(--color-text); }
 .comp-table .col-bad { color: rgba(240,244,255,0.28); }
 .comp-table .col-good { color: var(--color-accent-2); font-weight: 500; }
 
 /* ── PRODUCT ────────────────────────────────────────────────── */
 #produkt { background: var(--color-bg); }
-.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-.product-card {
-  background: linear-gradient(145deg, var(--color-surface-2), var(--color-surface));
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 2rem 1.75rem;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-  transition: border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.product-list { margin-top: 3rem; }
+.product-row {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  padding: 2.75rem 0;
+  border-top: 1px solid var(--color-border);
 }
-.product-card:hover {
-  border-color: rgba(255,107,53,0.25);
-  box-shadow: 0 0 24px rgba(255,107,53,0.07), inset 0 1px 0 rgba(255,255,255,0.06);
-}
-.product-icon { font-size: 1.75rem; margin-bottom: 1rem; }
-.product-title { font-size: var(--size-lg); font-weight: 600; color: var(--color-text); margin-bottom: 0.625rem; }
-.product-desc { font-size: var(--size-sm); color: var(--color-text-dim); line-height: 1.65; margin-bottom: 1rem; }
-.product-pitch { font-size: var(--size-xs); font-weight: 600; color: var(--color-accent); }
+.product-row:last-child { border-bottom: 1px solid var(--color-border); }
+.product-icon { font-size: 2rem; padding-top: 0.125rem; }
+.product-content { display: flex; flex-direction: column; gap: 0.5rem; }
+.product-title { font-size: 1.25rem; font-weight: 600; color: var(--color-text); letter-spacing: -0.015em; }
+.product-desc { font-size: var(--size-sm); color: var(--color-text-dim); line-height: 1.7; }
+.product-pitch { font-size: var(--size-sm); font-weight: 600; color: var(--color-accent); margin-top: 0.25rem; }
 .product-pitch-prefix { color: rgba(240,244,255,0.3); font-weight: 400; }
 
 /* ── PRICING ────────────────────────────────────────────────── */
@@ -1062,18 +1059,16 @@ p { color: var(--color-text-dim); line-height: 1.7; font-size: 1.0625rem; }
 #garantie .eyebrow { color: rgba(255,255,255,0.65); }
 #garantie h2 { color: #fff; }
 #garantie .section-sub { color: rgba(255,255,255,0.8); }
-.guarantee-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.guarantee-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 3rem; }
 .guarantee-card {
-  background: rgba(0,0,0,0.2);
+  background: transparent;
   border: none;
-  border-radius: 16px;
-  padding: 2rem 1.75rem;
-  transition: background 0.3s;
+  border-radius: 0;
+  padding: 0;
 }
-.guarantee-card:hover { background: rgba(0,0,0,0.3); }
-.guarantee-icon { font-size: 1.75rem; margin-bottom: 1rem; }
-.guarantee-title { font-size: var(--size-base); font-weight: 600; color: #fff; margin-bottom: 0.5rem; }
-.guarantee-desc { font-size: var(--size-sm); color: rgba(255,255,255,0.8); line-height: 1.65; }
+.guarantee-icon { font-size: 2.25rem; margin-bottom: 1.25rem; display: block; }
+.guarantee-title { font-size: 1.125rem; font-weight: 700; color: #fff; margin-bottom: 0.625rem; letter-spacing: -0.015em; }
+.guarantee-desc { font-size: var(--size-sm); color: rgba(255,255,255,0.75); line-height: 1.7; }
 
 /* ── FAQ ────────────────────────────────────────────────────── */
 #faq { background: var(--color-surface); }
@@ -1199,8 +1194,8 @@ footer { background: var(--color-bg); border-top: 1px solid var(--color-border);
   .nav-cta .btn-primary { display: none; }
   .steps-grid,
   .pillars-grid,
-  .product-grid,
   .guarantee-grid { grid-template-columns: 1fr; }
+  .product-row { grid-template-columns: 2.25rem 1fr; gap: 1.25rem; padding: 2rem 0; }
   .dash-sidebar { display: none; }
   .dash-interior { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; gap: 2rem; }
