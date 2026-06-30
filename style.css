@@ -850,7 +850,31 @@ p { color: var(--color-text-dim); line-height: 1.7; font-size: 1.0625rem; }
 
 /* ── 3 PILLARS ──────────────────────────────────────────────── */
 #saeulen { background: var(--color-bg); }
+/* old horizontal grid kept for reference but overridden by saeulen-layout */
 .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+
+/* ── 2-column: viz left, cards right ── */
+.saeulen-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3.5rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+.saeulen-viz {
+  position: sticky;
+  top: 5rem;
+}
+.saeulen-viz .proc-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.saeulen-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 
 .pillar-card {
   background: linear-gradient(145deg, var(--color-surface-2), var(--color-surface));
@@ -1402,6 +1426,9 @@ footer { background: var(--color-bg); border-top: 1px solid var(--color-border);
   .steps-grid,
   .pillars-grid,
   .guarantee-grid { grid-template-columns: 1fr; }
+  .saeulen-layout { grid-template-columns: 1fr; }
+  .saeulen-viz { position: static; display: none; }
+  .saeulen-cards { gap: 1rem; }
   .product-cards { padding-bottom: 0; }
   .product-card-float { width: 100%; margin-left: 0 !important; margin-top: 1.25rem !important; align-self: unset !important; }
   .dash-sidebar { display: none; }
