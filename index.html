@@ -377,7 +377,7 @@
             filter="url(#path-glow)"/>
 
       <!-- ── STEP 1: Kontakt  cx=132 cy=258 ── -->
-      <g class="proc-node" transform="translate(132,258)" style="--nd:0.4s">
+      <g class="proc-node" transform="translate(132,258)" style="--nd:0.2s">
         <circle r="40" fill="#0F1520" stroke="rgba(255,107,53,0.45)" stroke-width="1.5" filter="url(#node-glow)"/>
         <g transform="translate(-11,-11)" fill="none" stroke="rgba(255,255,255,0.88)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
@@ -387,7 +387,7 @@
       </g>
 
       <!-- ── STEP 2: Anruf  cx=360 cy=72 ── -->
-      <g class="proc-node" transform="translate(360,72)" style="--nd:0.9s">
+      <g class="proc-node" transform="translate(360,72)" style="--nd:0.5s">
         <circle r="40" fill="#0F1520" stroke="rgba(255,107,53,0.45)" stroke-width="1.5" filter="url(#node-glow)"/>
         <g transform="translate(-11,-11)" fill="none" stroke="rgba(255,255,255,0.88)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.56 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -395,20 +395,8 @@
         <text y="-52" text-anchor="middle" class="proc-label">Anruf</text>
       </g>
 
-      <!-- ── STEP 3: Demo geht raus  cx=600 cy=258 ── -->
-      <g class="proc-node" transform="translate(600,258)" style="--nd:1.4s">
-        <circle r="40" fill="#0F1520" stroke="rgba(255,107,53,0.45)" stroke-width="1.5" filter="url(#node-glow)"/>
-        <g transform="translate(-11,-11)" fill="none" stroke="rgba(255,255,255,0.88)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-          <line x1="8" y1="21" x2="16" y2="21"/>
-          <line x1="12" y1="17" x2="12" y2="21"/>
-          <polygon points="10 8.5 16 12 10 15.5 10 8.5" fill="rgba(255,255,255,0.88)" stroke="none"/>
-        </g>
-        <text y="62" text-anchor="middle" class="proc-label">Demo geht raus</text>
-      </g>
-
-      <!-- ── STEP 4: Termin bestätigt  cx=840 cy=72 ── -->
-      <g class="proc-node" transform="translate(840,72)" style="--nd:1.9s">
+      <!-- ── STEP 3: Termin bestätigt  cx=600 cy=258 ── -->
+      <g class="proc-node" transform="translate(600,258)" style="--nd:0.8s">
         <circle r="40" fill="#0F1520" stroke="rgba(255,107,53,0.45)" stroke-width="1.5" filter="url(#node-glow)"/>
         <g transform="translate(-11,-11)" fill="none" stroke="rgba(255,255,255,0.88)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
@@ -417,14 +405,33 @@
           <line x1="3" y1="10" x2="21" y2="10"/>
           <polyline points="9 16 11 18 15 14"/>
         </g>
-        <text y="-52" text-anchor="middle" class="proc-label">Termin bestätigt</text>
+        <text y="62" text-anchor="middle" class="proc-label">Termin bestätigt</text>
       </g>
 
-      <!-- ── STEP 5: Abschluss  cx=1080 cy=170 ── -->
-      <g class="proc-node" transform="translate(1080,170)" style="--nd:2.4s">
-        <circle r="40" fill="rgba(255,107,53,0.12)" stroke="#FF6B35" stroke-width="1.8" filter="url(#node-glow)"/>
-        <g transform="translate(-11,-11)" fill="none" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      <!-- ── STEP 4: Demo Showcase  cx=840 cy=72 ── -->
+      <g class="proc-node" transform="translate(840,72)" style="--nd:1.1s">
+        <circle r="40" fill="#0F1520" stroke="rgba(255,107,53,0.45)" stroke-width="1.5" filter="url(#node-glow)"/>
+        <g transform="translate(-11,-11)" fill="none" stroke="rgba(255,255,255,0.88)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+          <polygon points="10 8.5 16 12 10 15.5 10 8.5" fill="rgba(255,255,255,0.88)" stroke="none"/>
+        </g>
+        <text y="-52" text-anchor="middle" class="proc-label">Demo Showcase</text>
+      </g>
+
+      <!-- ── STEP 5: Bezahlung (Stripe)  cx=1080 cy=170 ── -->
+      <g class="proc-node" transform="translate(1080,170)" style="--nd:1.4s">
+        <!-- outer glow ring -->
+        <circle r="50" fill="rgba(255,107,53,0.06)" stroke="none"/>
+        <circle r="40" fill="#1a0f06" stroke="#FF6B35" stroke-width="2" filter="url(#node-glow)"/>
+        <!-- Stripe "S" shape -->
+        <text x="0" y="6" text-anchor="middle" font-family="Outfit,sans-serif" font-size="26" font-weight="800" fill="rgba(255,255,255,0.95)" letter-spacing="-1">S</text>
+        <!-- small coin sparks -->
+        <circle cx="28" cy="-24" r="5" fill="rgba(255,107,53,0.9)"/>
+        <text x="28" y="-20" text-anchor="middle" font-family="Outfit,sans-serif" font-size="7" font-weight="700" fill="#fff">€</text>
+        <circle cx="-30" cy="-20" r="4" fill="rgba(255,107,53,0.6)"/>
+        <circle cx="32" cy="18" r="3" fill="rgba(255,107,53,0.5)"/>
         </g>
         <text y="62" text-anchor="middle" class="proc-label proc-label--accent">~1.100 &euro;</text>
       </g>
