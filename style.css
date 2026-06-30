@@ -1409,6 +1409,7 @@ footer { background: var(--color-bg); border-top: 1px solid var(--color-border);
 .footer-links a:hover { color: var(--color-text); }
 
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
+/* ── TABLET (≤1024px) ──────────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero-dashboard-wrap { width: 96%; }
   .dash-interior { grid-template-columns: 150px 1fr; }
@@ -1417,32 +1418,131 @@ footer { background: var(--color-bg); border-top: 1px solid var(--color-border);
   .stats-grid { gap: 2.5rem; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
+  .saeulen-layout { grid-template-columns: 240px 1fr; gap: 2rem; }
 }
+
+/* ── MOBILE (≤768px) ────────────────────────────────────────── */
 @media (max-width: 768px) {
+  /* Spacing */
   :root { --section-gap: 3.5rem; }
+  section { padding: 4rem 0; }
+  .container { padding: 0 1.25rem; }
+
+  /* Nav */
   .nav-links { display: none; }
   .hamburger { display: block; }
   .nav-cta .btn-primary { display: none; }
-  .steps-grid,
-  .pillars-grid,
-  .guarantee-grid { grid-template-columns: 1fr; }
+
+  /* Typography */
+  h2 { font-size: clamp(1.65rem, 6vw, 2.5rem); }
+  .hero-h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+  .hero-sub { font-size: 1rem; }
+  .section-sub { font-size: 0.9375rem; }
+
+  /* Hero dashboard — simplified on mobile */
+  .hero-dashboard-wrap {
+    width: 100%;
+    margin-bottom: -2rem;
+    filter: none;
+  }
+  .dash-interior { grid-template-columns: 1fr; }
+  .dash-sidebar { display: none; }
+  .dash-stats { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+  .dash-chart-wrap { display: none; }
+  .dash-leads { display: none; }
+
+  /* Pillar / Saeulen */
   .saeulen-layout { grid-template-columns: 1fr; }
   .saeulen-viz { position: static; display: none; }
   .saeulen-cards { gap: 1rem; }
+  .pillars-grid,
+  .guarantee-grid { grid-template-columns: 1fr; }
+
+  /* Pillar cards — compact on mobile */
+  .pillar-card { padding: 1.5rem; }
+  .pillar-bullets { gap: 0.25rem; }
+
+  /* Product floating cards */
   .product-cards { padding-bottom: 0; }
-  .product-card-float { width: 100%; margin-left: 0 !important; margin-top: 1.25rem !important; align-self: unset !important; }
-  .dash-sidebar { display: none; }
-  .dash-interior { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .product-card-float {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+    align-self: unset !important;
+    animation: none !important;
+  }
+
+  /* Stats / Funnel */
+  .stats-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .funnel-meta { width: 110px; }
+  .funnel-bar { height: 46px; }
+  .earnings-col { padding: 1.5rem; }
+  .earnings-grid { grid-template-columns: repeat(2, 1fr); gap: 0.875rem; }
+
+  /* Steps */
+  .steps-grid { grid-template-columns: 1fr; }
+
+  /* Comparison table — scroll wrapper */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .comp-table { min-width: 480px; font-size: 0.8125rem; }
+  .comp-table th:nth-child(2),
+  .comp-table td:nth-child(2) { display: none; }
+
+  /* Pricing */
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
   .pricing-card.featured { order: -1; transform: none; }
-  .comp-table th:nth-child(2), .comp-table td:nth-child(2) { display: none; }
+
+  /* Calculator */
+  .rechner-inner { padding: 0 0.25rem; }
+  .plan-selector { gap: 0.375rem; }
+  .plan-btn { padding: 0.45rem 0.875rem; font-size: 0.8125rem; }
+  .rechner-output { padding: 1.5rem 1.25rem; }
+  .rechner-breakdown { gap: 0.75rem; }
+
+  /* Guarantee */
+  .guarantee-grid { gap: 1.5rem; }
+  .guarantee-card { padding: 1.5rem; }
+
+  /* FAQ */
+  .faq-item summary { padding: 1rem 1.25rem; font-size: 0.9375rem; }
+
+  /* Footer */
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
   .cockpit-stats-row { grid-template-columns: 1fr; }
+
+  /* WhatsApp CTA */
+  .btn-whatsapp { width: 100%; justify-content: center; }
+
+  /* Process viz section spacing */
+  #prozess-viz { display: none; }
 }
+
+/* ── SMALL MOBILE (≤480px) ──────────────────────────────────── */
 @media (max-width: 480px) {
-  .hero-h1 { font-size: 1.875rem; }
-  .btn-xl { font-size: var(--size-base); padding: 0.875rem 1.5rem; }
-  .rechner-deals-count { font-size: 2.75rem; }
-  .earnings-amount { font-size: var(--size-xl); }
+  section { padding: 3rem 0; }
+  .container { padding: 0 1rem; }
+
+  .hero-h1 { font-size: 1.9rem; line-height: 1.1; }
+  .hero-sub { font-size: 0.9375rem; }
+  .btn-xl { font-size: 0.9375rem; padding: 0.875rem 1.375rem; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { width: 100%; text-align: center; justify-content: center; }
+
+  .rechner-deals-count { font-size: 2.5rem; }
+  .earnings-amount { font-size: 2rem; text-shadow: none; }
+  .earnings-grid { grid-template-columns: 1fr; }
+
+  .pillar-card { padding: 1.25rem; }
+  .pillar-title { font-size: 1.15rem; }
+
+  .product-card-float { padding: 1.5rem 1.25rem; }
+
+  .pricing-grid { max-width: 100%; }
+  .pricing-card { padding: 1.5rem; }
+  .pricing-amt { font-size: 2.5rem; }
+
+  .stats-intro { font-size: 0.9375rem; }
+  .funnel-meta { display: none; }
+  .funnel-bar { height: 40px; }
+  .funnel-bar-label { font-size: 0.625rem; }
 }
