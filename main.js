@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bruttoEl) bruttoEl.textContent = brutto.toLocaleString('de-DE') + ' €';
     if (nettoEl) nettoEl.textContent = netto.toLocaleString('de-DE') + ' €';
     const pct = ((deals - 1) / 29) * 100;
-    slider.style.background = `linear-gradient(to right, var(--brand) ${pct}%, rgba(255,255,255,0.1) ${pct}%)`;
+    slider.style.background = `linear-gradient(to right, var(--color-accent) ${pct}%, rgba(255,255,255,0.14) ${pct}%)`;
   }
 
   if (slider) {
