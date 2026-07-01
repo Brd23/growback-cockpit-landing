@@ -261,6 +261,9 @@
         <span class="video-placeholder-text">Video folgt - 2 Min. Walkthrough</span>
       </div>
       <p class="video-quote">"Wenn du siehst, wie einfach ein Call l&auml;uft - verstehst du, warum unsere Setter wiederkommen."</p>
+      <div class="section-cta">
+        <a href="#kontakt" class="btn btn-primary btn-hero">7 Tage kostenlos testen &rarr;</a>
+      </div>
     </div>
   </div>
 </section>
@@ -298,6 +301,9 @@
         <div class="step-big-amount">~1.100 &euro;</div>
         <p class="step-desc">Automatisch auf dein Konto. Keine Buchhaltung. Kein Warten. <span class="badge badge-green" style="vertical-align:middle;">&#10003; Bezahlt</span></p>
       </div>
+    </div>
+    <div class="section-cta">
+      <a href="#kontakt" class="btn btn-primary btn-hero">Jetzt loslegen &rarr;</a>
     </div>
   </div>
 </section>
@@ -455,6 +461,9 @@
       </div>
 
     </div>
+    <div class="section-cta">
+      <a href="#kontakt" class="btn btn-primary btn-hero">System jetzt aktivieren &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -507,6 +516,9 @@
         <p class="earnings-tagline">Keine Anstellung. Keine Fixzeiten. Skalierbar.</p>
       </div>
     </div>
+    <div class="section-cta">
+      <a href="#kontakt" class="btn btn-primary btn-xl">Meinen Platz sichern &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -535,6 +547,9 @@
           <tr><td>CSV-Import eigener Leads</td><td class="col-bad">&#10007; Nicht m&ouml;glich</td><td class="col-good">&#10003; In allen Pl&auml;nen</td></tr>
         </tbody>
       </table>
+    </div>
+    <div class="section-cta">
+      <a href="#kontakt" class="btn btn-primary btn-hero">Unterschied selbst erleben &rarr;</a>
     </div>
   </div>
 </section>
@@ -565,6 +580,9 @@
       </div>
     </div>
     <!-- TODO: Screenshot dachwerk-huber.vercel.app einfuegen -->
+    <div class="section-cta">
+      <a href="#kontakt" class="btn btn-primary btn-hero">Demo-System jetzt sichern &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -707,6 +725,10 @@
         <p class="guarantee-desc">Fragen? Du erreichst [Dein Name] pers&ouml;nlich - kein Support-Ticket-System. WhatsApp: +49 160 92209851</p>
       </div>
     </div>
+    <div class="section-cta">
+      <a href="#kontakt" class="btn btn-on-accent btn-hero">Risikofrei starten &rarr;</a>
+      <p class="section-cta-note">Keine Kreditkarte n&ouml;tig f&uuml;r die ersten 7 Tage.</p>
+    </div>
   </div>
 </section>
 
@@ -748,13 +770,23 @@
         <div class="faq-answer">Nein. Monatlich k&uuml;ndbar, jederzeit. Kein Wenn und Aber.</div>
       </details>
     </div>
+    <div class="section-cta">
+      <a href="#kontakt" class="btn btn-primary btn-hero">Jetzt bewerben &rarr;</a>
+    </div>
   </div>
 </section>
 
 <!-- S14 KONTAKTFORMULAR -->
 <section id="kontakt" class="reveal">
+  <div class="kontakt-bg" aria-hidden="true"></div>
   <div class="container">
-    <div class="kontakt-inner">
+    <div class="kontakt-card">
+      <div class="kontakt-card-logo">
+        <svg width="30" height="30" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="12" stroke="#FF6B35" stroke-width="2"/>
+          <circle cx="14" cy="14" r="5" stroke="#FF6B35" stroke-width="2"/>
+        </svg>
+      </div>
       <h2>Heute bewerben. Morgen fr&uuml;h erste Leads.</h2>
       <p class="kontakt-sub">Account-Setup in unter 24 Stunden. Erste Demo vor dem Mittagessen. Erstes Gespr&auml;ch am Nachmittag.</p>
       <!-- TODO: Google Apps Script URL eintragen -->
@@ -763,15 +795,14 @@
         <input type="email" name="email" placeholder="E-Mail" required autocomplete="email">
         <input type="tel" name="phone" placeholder="Telefon" required autocomplete="tel">
         <select name="plan">
-          <option value="">Welchen Plan interessiert dich?</option>
-          <option value="starter">Starter</option>
+          <option value="starter" selected>Starter</option>
           <option value="pro">Pro</option>
           <option value="team">Team</option>
           <option value="schauen">Erst mal schauen</option>
         </select>
         <textarea name="about" placeholder="Kurz zu dir (optional): Vertriebserfahrung, Ziele, Verf&uuml;gbarkeit" rows="3"></textarea>
         <div class="form-submit-wrapper">
-          <button type="submit" class="btn btn-primary btn-xl">Jetzt kostenlos 7 Tage testen &rarr;</button>
+          <button type="submit" class="btn btn-primary btn-xl kontakt-submit">Jetzt kostenlos 7 Tage testen &rarr;</button>
         </div>
       </form>
       <div id="form-success">
